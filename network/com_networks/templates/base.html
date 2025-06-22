@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Курс{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Обучение администрированию современных компьютерных сетей</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Обучение администрированию современных компьютерных сетей</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+services:
+  django_server:
+    container_name: django_server
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./ssl/cert.crt:/etc/ssl/cert.crt
+      - ./ssl/key.key:/etc/ssl/key.key
+    ports:
+      - "25611:8000"
+    networks:
+      - default
